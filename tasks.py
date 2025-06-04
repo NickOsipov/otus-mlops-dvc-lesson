@@ -19,3 +19,10 @@ def test(ctx):
 def setup_dvc(ctx):
     """Setup DVC."""
     ctx.run("bash setup-dvc.sh", pty=True)
+
+@task
+def add_train_stage(ctx):
+    """Add train stage to DVC."""
+    ctx.run(
+        "dvc stage add -n train -d train.py -d data -o models/model.joblib -M metrics.csv python3 train.py"
+    )
