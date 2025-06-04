@@ -2,3 +2,5 @@ dvc[s3]==3.59.2
 pandas==2.2.3
 scikit-learn==1.6.1
 loguru==0.7.3
+invoke==2.2.0
+python-dotenv==1.1.0
